@@ -22,4 +22,7 @@ migratedown:
 sqlc:
 	sqlc generate
 
-.PHONY: psqlup psqldown createdb dropdb migrateup migratedown
+test:
+	go test -v -cover ./...
+
+.PHONY: psqlup psqldown createdb dropdb migrateup migratedown test
